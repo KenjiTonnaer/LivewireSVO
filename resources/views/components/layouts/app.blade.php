@@ -33,13 +33,6 @@
                                     </li>
 
                                     @auth
-                                        <li>
-                                            @auth
-                                                @if(auth()->user()->is_admin)
-                                                    <a href="/dashboard" class="text-red-500 px-3">Admin Dashboard</a>
-                                                @endif
-                                            @endauth
-                                        </li>
 
                                         @if (Auth::user()->is_admin)
                                             <li>

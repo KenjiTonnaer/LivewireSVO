@@ -15,7 +15,6 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        'admin' => \App\Http\Middleware\AdminMiddleware::class,
 
     ];
 
@@ -42,9 +41,9 @@ class Kernel extends HttpKernel
     /**
      * Middleware aliasen.
      */
-    protected $middlewareAliases = [
-        'auth' => \App\Http\Middleware\Authenticate::class,
-        'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'admin' => \App\Http\Middleware\AdminMiddleware::class, // alleen als je admin wilt
-    ];
+protected $middlewareAliases = [
+    'auth' => \App\Http\Middleware\Authenticate::class,
+    'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+    'admin' => \App\Http\Middleware\AdminMiddleware::class,
+];
 }
